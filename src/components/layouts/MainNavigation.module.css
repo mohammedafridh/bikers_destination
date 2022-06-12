@@ -1,0 +1,46 @@
+.header{
+    border: 1px solid;
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:linear-gradient(35deg, #CCFFFF,#FFCCCC,rgb(204,204,255));
+    margin: 0;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    border: none;
+}
+
+.title{
+    font-size: 22px;
+    font-family: cursive;
+    color: blue;
+}
+
+.head2{
+    position: relative;
+    left: -29.7rem;
+    top: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-family:sans-serif;
+    
+}
+
+.header ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+.header li{
+    margin-right: 2rem;
+}
+
+.header a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(6, 54, 82);
+}
