@@ -13,7 +13,6 @@ function Bike(){
             return response.json();
         }).then(data =>{
             const bikes = [];
-            console.log(bikes);
             for(const key in data){
                 const bike = {
                     id:key,
