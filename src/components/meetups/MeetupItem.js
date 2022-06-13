@@ -5,25 +5,26 @@ import FavoriteBikes from '../../store/FavoriteContext';
 
 function MeetupItem(props){
 
-    const favoriteContext = useContext(FavoriteBikes);
-    const favBike = favoriteContext.favoriteItem(props.key)
+    const favContext = useContext(FavoriteBikes);
+    const bikeIsFavorite = favContext.favoriteBike(props.id)
 
-    function FavoritesHandler(){
-        if(favBike){
-            favoriteContext.removeFavorite(props.key)
-        }else{
-            favoriteContext.addFavorite({
-                key:props.key,
+    function FavoritesManager(){
+        if(bikeIsFavorite){
+            favContext.removeFavorite(props.id)
+        }
+        else{
+            favContext.addFavorite({
+                id:props.id,
                 brand:props.brand,
                 image:props.image,
-                bike_name:props.bike_name,
+                name:props.bike_name,
                 capacity:props.capacity,
                 color:props.color
             })
         }
     }
 
-    return <li className = {classes.item}>
+     return <li className = {classes.item}>
         <Card>
         <div className = {classes.image}>
             <img src = {props.image} alt = {props.bike_name} />
@@ -35,7 +36,9 @@ function MeetupItem(props){
             <h3>{props.color}</h3>
         </div>
         <div className = {classes.actions}>
-            <button className = {classes.btn} onClick = {FavoritesHandler}>{favBike?'Remove from Favorites':'Add to Favorites'}</button>
+            <button className = {classes.btn} onClick = {FavoritesManager}>
+                {bikeIsFavorite?'Favorites':'Add to Favorites'}
+            </button>
         </div>
         </Card>     
     </li>

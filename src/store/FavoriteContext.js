@@ -1,37 +1,39 @@
-import {createContext,useState} from 'react'
+import {createContext, useState} from 'react'
 
 const FavoriteBikes = createContext({
-    favorites:[],
+    favorites: [],
     totalFavorites:0,
-    favoriteItem:(bikeId)=>{},
-    addFavorite:(newBike)=>{},
+    favoriteBike:(bikeId)=>{},
+    addFavorite:(bikeDetails)=>{},
     removeFavorite:(bikeId)=>{}
 })
 
-export function FavoritesManager(props){
+export function FavoriteBikesProvider(props){
 
-    const [userFavorite,setUserFavorite] = useState([]);
+    const [favBike,setFavBike] = useState([])
 
-    function itemIsFavorite(bikeId){
-        return userFavorite.some(bike => bike.id === bikeId)
+    function BikeIsFavorite(bikeId){
+        return favBike.some(bike=>bike.id === bikeId) 
     }
-    function addFavoriteItem(newBike){
-        setUserFavorite((prevUserFavorite)=>{
-            return prevUserFavorite.concat(newBike)
+
+    function AddBikeFavorite(bikeDetails){
+        setFavBike((prevFavBike)=>{
+            return prevFavBike.concat(bikeDetails)
         })
     }
-    function removeFavoriteItem(bikeId){
-        setUserFavorite((prevUserFavorite)=>{
-            return prevUserFavorite.filter(bike=> bike.id !== bikeId)
+
+    function RemoveBikeFavorite(bikeId){
+        setFavBike((prevFavBike)=>{
+            return prevFavBike.filter(bike => bike.id !== bikeId)
         })
     }
 
     const context = {
-        favorites:userFavorite,
-        totalFavorites:userFavorite.length,
-        favoriteItem:itemIsFavorite,
-        addFavorite:addFavoriteItem,
-        removeFavorite:removeFavoriteItem
+        favorites:favBike,
+        totalFavorites:favBike.length,
+        favoriteBike:BikeIsFavorite,
+        addFavorite:AddBikeFavorite,
+        removeFavorite:RemoveBikeFavorite
     }
 
     return <FavoriteBikes.Provider value = {context}>
