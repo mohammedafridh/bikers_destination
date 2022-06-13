@@ -1,10 +1,10 @@
-import classes from './MeetupList.module.css'
-import MeetupItem from './MeetupItem'
+import classes from './BikeList.module.css'
+import BikeItem from './BikeItem'
 
-function MeetupList(props){
+function BikeList(props){
     return <ul className = {classes.list}>
         {props.meetups.map((meetup,index) =>(         
-            <MeetupItem 
+            <BikeItem 
             key = {index}
                 id = {meetup.id}
                 brand = {meetup.brand}
@@ -16,4 +16,4 @@ function MeetupList(props){
     </ul>
 }
 
-export default MeetupList;
+export default BikeList;

@@ -1,9 +1,9 @@
-import classes from './MeetupItem.module.css';
+import classes from './BikeItem.module.css';
 import Card from '../../ui/Card'
 import {useContext} from 'react'
 import FavoriteBikes from '../../store/FavoriteContext';
 
-function MeetupItem(props){
+function BikeItem(props){
 
     const favContext = useContext(FavoriteBikes);
     const bikeIsFavorite = favContext.favoriteBike(props.id)
@@ -37,11 +37,11 @@ function MeetupItem(props){
         </div>
         <div className = {classes.actions}>
             <button className = {classes.btn} onClick = {FavoritesManager}>
-                {bikeIsFavorite?'Favorites':'Add to Favorites'}
+                {bikeIsFavorite?'Unfavorite':'Favorite'}
             </button>
         </div>
         </Card>     
     </li>
 }
 
-export default MeetupItem;
+export default BikeItem;

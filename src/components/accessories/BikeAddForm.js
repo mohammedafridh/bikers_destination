@@ -1,7 +1,7 @@
 import {useRef} from 'react'
-import classes from './MeetupForm.module.css'
+import classes from './BikeAddForm.module.css'
 
-function MeetupForm(props){
+function BikeAddForm(props){
 
     const brand = useRef();
     const bikeName = useRef();
@@ -38,6 +38,7 @@ function MeetupForm(props){
                 <option value = 'BAJAJ' ref = {brand}>BAJAJ</option>
                 <option value = 'HONDA' ref = {brand}>HONDA</option>
                 <option value = 'TVS' ref = {brand}>TVS</option>
+                <option value = 'Ducati' ref = {brand}>DUCATI</option>
             </select>
         </div>
         <div className = {classes.content}>
@@ -63,4 +64,4 @@ function MeetupForm(props){
     </form>
 }
 
-export default MeetupForm;
+export default BikeAddForm;

@@ -1,4 +1,4 @@
-import MeetupList from '../components/meetups/MeetupList'
+import BikeList from '../components/accessories/BikeList'
 import {useState,useEffect} from 'react';
 
 function Bike(){
@@ -36,7 +36,7 @@ function Bike(){
             <div>
                 <h1>Bikes Gallery</h1>
             </div>
-            <MeetupList meetups = {bikeLoading}/>
+            <BikeList meetups = {bikeLoading}/>
         </section>
     )
 }

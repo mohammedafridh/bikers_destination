@@ -1,4 +1,4 @@
-import MeetupForm from "../components/meetups/MeetupForm";
+import BikeAddForm from "../components/accessories/BikeAddForm";
 import {useNavigate} from 'react-router-dom'
 
 function AddBike(){
@@ -16,7 +16,7 @@ function AddBike(){
 
     return (<div>
         <div><h1>Add Bikes</h1></div>
-        <MeetupForm addDetails = {getDetails}/>
+        <BikeAddForm addDetails = {getDetails}/>
     </div>
         
     )

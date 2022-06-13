@@ -44,3 +44,14 @@
     font-size: 15px;
     color: rgb(6, 54, 82);
 }
+
+.badge{
+    background-color: #ee4b4b;
+    color: white;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    padding: 3px;
+    position: relative;
+    top: -0.3rem;
+    font-size: 10px;
+}
