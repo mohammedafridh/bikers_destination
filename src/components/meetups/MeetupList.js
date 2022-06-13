@@ -3,8 +3,9 @@ import MeetupItem from './MeetupItem'
 
 function MeetupList(props){
     return <ul className = {classes.list}>
-        {props.meetups.map((meetup) =>(         
+        {props.meetups.map((meetup,index) =>(         
             <MeetupItem 
+            key = {index}
                 id = {meetup.id}
                 brand = {meetup.brand}
                 image = {meetup.image}
