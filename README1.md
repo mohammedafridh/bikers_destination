@@ -6,9 +6,9 @@ Bikers Destination is a project, which gives users the ability to
 
 
 Technologies Used
-HTML
-CSS
-Javascript
-React
+* HTML
+* CSS
+* Javascript
+* React
 
 You can fine the project live here [live] https://github.com/mohammedafridh/bikers_destination
