@@ -6,7 +6,8 @@
     width: 100%;
     object-fit: cover;
     border-radius: 6px 6px 0 0;
-    max-height: 30rem;
+    max-height: 27rem;
+    background-size: 100% ;
    
 }
 

@@ -8,7 +8,7 @@ function Bike(){
 
     useEffect(()=>{
         setIsLoading(true);
-        fetch('https://react-router-dom-5fd1c-default-rtdb.firebaseio.com/bikes.json'
+        fetch('https://bikers-destination-default-rtdb.firebaseio.com/bikes.json'
         ).then(response =>{
             return response.json();
         }).then(data =>{

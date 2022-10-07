@@ -6,7 +6,7 @@ function AddBike(){
     const navigate = useNavigate();
 
     function getDetails(details){
-        fetch('https://react-router-dom-5fd1c-default-rtdb.firebaseio.com/bikes.json',
+        fetch('https://bikers-destination-default-rtdb.firebaseio.com/bikes.json',
         {
             method:'POST',
             body:JSON.stringify(details)
